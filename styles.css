@@ -96,7 +96,7 @@ body {
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: max-content;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -314,7 +314,7 @@ body {
 }
 
 .hero-text-content {
-  max-width: 56rem;
+  max-width: 100rem;
 }
 
 .hero-badge {
