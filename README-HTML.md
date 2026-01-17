@@ -55,7 +55,7 @@ This is the pure HTML, CSS, and JavaScript version of the Two Edge Global Soluti
 ### Contact Information
 - **Phone**: +91 9399219240
 - **Email**: info@twoedgeglobal.com
-- **Address**: 216 A Sundar Nagar Main Sukhliya Indore, Heera Nagar Thane Ke Pass, Indore
+- **Address**: Vijay nagar near C21 mall , Indore
 - **Hours**: Monday-Saturday 10 AM - 7 PM, Closed Sundays
 
 ### Social Media Links
