@@ -53,7 +53,7 @@ This is the pure HTML, CSS, and JavaScript version of the Two Edge Global Soluti
 - **Form Validation**: Email and phone number validation
 
 ### Contact Information
-- **Phone**: +91 9399219240
+- **Phone**: +91 9109125765 , 9399219240
 - **Email**: twoedgeglobal@gmail.com
 - **Address**: Vijay nagar near C21 mall , Indore
 - **Hours**: Monday-Saturday 10 AM - 7 PM, Closed Sundays
@@ -61,7 +61,7 @@ This is the pure HTML, CSS, and JavaScript version of the Two Edge Global Soluti
 ### Social Media Links
 - LinkedIn: https://www.linkedin.com/in/twoedge-solutions-0783b0397
 - Instagram: https://www.instagram.com/tegs_twoedgeglobalsolution
-- WhatsApp: https://wa.me/919399219240
+- WhatsApp: https://wa.me/919109125765 , 9399219240
 
 ## How to Use
 
@@ -130,7 +130,7 @@ To create the remaining policy pages (Terms of Service, Cookie Policy), copy the
 
 For questions or issues, contact:
 - Email: twoedgeglobal@gmail.com
-- Phone: +91 9399219240
+- Phone: +91 9109125765 , 9399219240
 
 ---
 
