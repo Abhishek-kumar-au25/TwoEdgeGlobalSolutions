@@ -120,6 +120,14 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+// Add click handlers for service buttons if needed
+document.querySelectorAll(".service-button").forEach((button) => {
+  button.addEventListener("click", function () {
+    // Add your navigation or modal logic here
+    console.log("Learn More clicked for service");
+  });
+});
+
 // Form Submission Handler
 function handleFormSubmit(event) {
   event.preventDefault();
