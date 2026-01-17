@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Edge Global Solutions - Recruitment & Staffing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo-container">
+            <a href="/">
+              <img
+                src="/logo.png"
+                alt="Two Edge Global Solutions"
+                class="logo"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-links desktop-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a
+              href="#services"
+              class="nav-link"
+              onclick="scrollToSection('services', event)"
+              >Services</a
+            >
+            <a href="contact.html" class="nav-link">Contact</a>
+            <button
+              class="btn btn-primary"
+              onclick="openModal('getStartedModal')"
+            >
+              Get Started
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="mobile-menu-btn"
+            onclick="toggleMobileMenu()"
+            id="mobileMenuBtn"
+          >
+            <svg
+              class="menu-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg
+              class="close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="display: none"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a
+            href="#services"
+            class="nav-link"
+            onclick="
+              scrollToSection('services', event);
+              toggleMobileMenu();
+            "
+            >Services</a
+          >
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button
+            class="btn btn-primary"
+            onclick="
+              openModal('getStartedModal');
+              toggleMobileMenu();
+            "
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-carousel">
+        <div
+          class="hero-image active"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1758520144437-f068ecaf0d83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920&quot;);
+          "
+        ></div>
+        <div
+          class="hero-image"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920&quot;);
+          "
+        ></div>
+        <div
+          class="hero-image"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1758518730178-6e237bc8b87d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920&quot;);
+          "
+        ></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <span>Trusted Recruitment Partner</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="brand-name">Two Edge Global Solutions</span>
+          </h1>
+          <p class="hero-subtitle">
+            Your trusted partner in recruitment and staffing solutions.
+          </p>
+          <p class="hero-description">
+            Connecting skilled talent with the right opportunities worldwide.
+          </p>
+          <div class="hero-buttons">
+            <button
+              class="btn btn-primary btn-lg"
+              onclick="openModal('getStartedModal')"
+            >
+              Get Started
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="margin-left: 8px"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="contact.html" class="btn btn-outline btn-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="margin-right: 8px"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Indicators -->
+      <div class="hero-indicators">
+        <button class="indicator active" onclick="changeHeroImage(0)"></button>
+        <button class="indicator" onclick="changeHeroImage(1)"></button>
+        <button class="indicator" onclick="changeHeroImage(2)"></button>
+      </div>
+
+      <div class="hero-bottom-gradient"></div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+      <!-- About Section -->
+      <section id="about" class="section section-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">
+              About
+              <span class="brand-name-inline">Two Edge Global Solutions</span>
+            </h2>
+            <p class="section-description">
+              Leading recruitment and staffing solutions provider
+            </p>
+          </div>
+          <div class="about-content">
+            <p class="about-text">
+              We are a premier recruitment and staffing solutions company
+              dedicated to connecting talented professionals with exceptional
+              career opportunities. With years of industry expertise and a
+              commitment to excellence, we serve as your trusted partner in
+              navigating the complex landscape of talent acquisition and
+              workforce management.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="section section-dark">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title text-white">Our Services</h2>
+            <p class="section-description text-gray">
+              Comprehensive recruitment and staffing solutions
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Permanent Recruitment</h3>
+              <p class="service-description">
+                Find the perfect long-term talent for your organization
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Temporary Staffing</h3>
+              <p class="service-description">
+                Flexible workforce solutions for short-term needs
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  ></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Contract Hiring</h3>
+              <p class="service-description">
+                Specialized professionals for project-based work
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Executive Search</h3>
+              <p class="service-description">
+                Top-tier leadership recruitment services
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision & Mission Section -->
+      <section id="vision-mission" class="section section-light">
+        <div class="container">
+          <div class="vision-mission-grid">
+            <div class="vision-mission-card">
+              <div class="vm-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="vm-title">Our Vision</h3>
+              <p class="vm-description">
+                To be the global leader in recruitment and staffing solutions,
+                recognized for excellence, innovation, and our unwavering
+                commitment to connecting exceptional talent with outstanding
+                opportunities.
+              </p>
+            </div>
+            <div class="vision-mission-card">
+              <div class="vm-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="vm-title">Our Mission</h3>
+              <p class="vm-description">
+                To deliver exceptional recruitment and staffing solutions that
+                empower businesses to thrive and individuals to achieve their
+                career aspirations through personalized service, industry
+                expertise, and innovative approaches.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact CTA Section -->
+      <section class="section section-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Transform Your Workforce?</h2>
+            <p class="cta-description">
+              Let's discuss how we can help you achieve your recruitment goals
+            </p>
+            <div class="cta-buttons">
+              <button
+                class="btn btn-primary btn-lg"
+                onclick="openModal('getStartedModal')"
+              >
+                Get Started Today
+              </button>
+              <a href="contact.html" class="btn btn-outline-white btn-lg"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col footer-col-wide">
+            <img
+              src="/logo.png"
+              alt="Two Edge Global Solutions"
+              class="footer-logo"
+            />
+
+            <p class="footer-description">
+              Your trusted global recruitment and staffing partner, providing
+              reliable human resource solutions that empower businesses and
+              careers.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">About Us</a></li>
+              <li>
+                <a href="#services" onclick="scrollToSection('services', event)"
+                  >Services</a
+                >
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Services</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Talent Acquisition</a></li>
+              <li><a href="#services">Staffing Solutions</a></li>
+              <li><a href="#services">Career Development</a></li>
+              <li><a href="#services">Global Recruitment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/twoedge-solutions-0783b0397"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/tegs_twoedgeglobalsolution"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a
+            href="https://wa.me/919399219240"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p class="copyright">
+            © 2026
+            <span class="brand-name-inline">Two Edge Global Solutions</span>.
+            All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="footer-note">
+          Note: Job responsibilities are subject to modification based on
+          organizational and operational changes.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Floating Join Button -->
+    <button
+      class="floating-join-btn"
+      onclick="openModal('getStartedModal')"
+      id="floatingBtn"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      </svg>
+      <span>Ready to join our exceptional team?</span>
+      <div class="pulse-ring"></div>
+    </button>
+
+    <!-- Get Started Modal -->
+    <div id="getStartedModal" class="modal">
+      <div class="modal-overlay" onclick="closeModal('getStartedModal')"></div>
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('getStartedModal')">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="modal-header">
+          <h2>Get Started Today</h2>
+          <p>
+            Fill out the form below and we'll get back to you within 24 hours
+          </p>
+          <div class="modal-divider"></div>
+        </div>
+
+        <form class="modal-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="john@company.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91 9876543210"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Your Company"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interested In *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="permanent">Permanent Recruitment</option>
+              <option value="temporary">Temporary Staffing</option>
+              <option value="contract">Contract Hiring</option>
+              <option value="executive">Executive Search</option>
+              <option value="payroll">Payroll Management</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us about your recruitment needs..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-lg">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
