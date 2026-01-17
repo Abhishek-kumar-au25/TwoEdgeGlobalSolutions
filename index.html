@@ -8,6 +8,50 @@
     <link rel="icon" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
   </head>
+  
+  <!-- <div id="ud-loader"></div>
+
+  <script>
+    // Load modal HTML
+    fetch("underdevelopment.html")
+      .then((r) => r.text())
+      .then((html) => {
+        document.getElementById("ud-loader").innerHTML = html;
+      });
+
+    // OPEN modal (global)
+    function udOpenModal() {
+      const modal = document.getElementById("underDevelopmentModal");
+      if (modal) {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    }
+
+    // CLOSE modal
+    function udCloseModal() {
+      const modal = document.getElementById("underDevelopmentModal");
+      if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    // CLICK delegation (WORKS FOR FETCHED HTML)
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("[data-ud-close]")) {
+        udCloseModal();
+      }
+    });
+
+    // ESC key support
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        udCloseModal();
+      }
+    });
+  </script> -->
+
   <body>
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
@@ -26,14 +70,76 @@
           <!-- Desktop Navigation -->
           <div class="nav-links desktop-nav">
             <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a
-              href="#services"
-              class="nav-link"
-              onclick="scrollToSection('services', event)"
-              >Services</a
-            >
-            <a href="contact.html" class="nav-link">Contact</a>
+
+            <!-- About Us Dropdown -->
+            <div class="nav-dropdown">
+              <a href="about.html" class="nav-link dropdown-toggle">
+                About Us
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="company-overview.html">Company Overview</a>
+                <a href="mission-vision.html">Vision & Mission</a>
+                <a href="our-values.html">Our Values</a>
+              </div>
+            </div>
+
+            <!-- Team TEGS Dropdown -->
+            <div class="nav-dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Team TEGS
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Leadership</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Recruiters</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Careers</a
+                >
+              </div>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="nav-dropdown">
+              <a href="services.html" class="nav-link dropdown-toggle">
+                Services
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Talent Acquisition</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Staffing Solutions</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Executive Search</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >HR Consulting</a
+                >
+              </div>
+            </div>
+
+            <!-- Others Dropdown -->
+            <div class="nav-dropdown">
+              <a href="others.html" class="nav-link dropdown-toggle">
+                Others
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Blog</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')">FAQ</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+
             <button
               class="btn btn-primary"
               onclick="openModal('getStartedModal')"
@@ -835,6 +941,1497 @@
         </div>
       </section>
 
+      <!-- WHY CHOOSE US -->
+      <section class="whychooseus-section">
+        <!-- Background decorations -->
+        <div class="whychooseus-bg-decoration-topright"></div>
+        <div class="whychooseus-bg-decoration-bottomleft"></div>
+        <div class="whychooseus-bg-decoration-center"></div>
+
+        <div class="whychooseus-container">
+          <!-- Header -->
+          <div class="whychooseus-header">
+            <div class="whychooseus-badge">
+              <svg
+                class="whychooseus-badge-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                />
+              </svg>
+              <span class="whychooseus-badge-text">Our Competitive Edge</span>
+            </div>
+
+            <h2 class="whychooseus-title">
+              Why Choose
+              <span class="whychooseus-brand-name"
+                >Two Edge Global Solutions</span
+              >
+            </h2>
+
+            <p class="whychooseus-description">
+              We deliver exceptional recruitment solutions backed by proven
+              expertise, cutting-edge technology, and an unwavering commitment
+              to your success
+            </p>
+
+            <div class="whychooseus-divider"></div>
+          </div>
+
+          <!-- Main Content - Reasons Grid -->
+          <div class="whychooseus-content">
+            <div class="whychooseus-reasons-grid">
+              <!-- Extensive Talent Network -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-blue"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div
+                    class="whychooseus-reason-icon whychooseus-gradient-blue"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">
+                      Extensive Talent Network
+                    </h3>
+                    <p class="whychooseus-reason-description">
+                      Access to a vast pool of qualified candidates across
+                      various industries and skill levels, ensuring we find the
+                      perfect match for your requirements.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-blue"
+                ></div>
+              </div>
+
+              <!-- Industry Expertise -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-amber"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div
+                    class="whychooseus-reason-icon whychooseus-gradient-amber"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">Industry Expertise</h3>
+                    <p class="whychooseus-reason-description">
+                      Deep industry-specific knowledge and insights accumulated
+                      over years of experience in recruitment and staffing
+                      solutions.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-amber"
+                ></div>
+              </div>
+
+              <!-- Customized Solutions -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-purple"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div
+                    class="whychooseus-reason-icon whychooseus-gradient-purple"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">
+                      Customized Solutions
+                    </h3>
+                    <p class="whychooseus-reason-description">
+                      Tailored recruitment strategies designed specifically for
+                      your organization's unique needs and company culture.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-purple"
+                ></div>
+              </div>
+
+              <!-- Quality Assurance -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-green"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div
+                    class="whychooseus-reason-icon whychooseus-gradient-green"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">Quality Assurance</h3>
+                    <p class="whychooseus-reason-description">
+                      Rigorous screening, verification, and background checks to
+                      ensure you receive only top-tier, verified candidates.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-green"
+                ></div>
+              </div>
+
+              <!-- Quick Turnaround -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-red"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div class="whychooseus-reason-icon whychooseus-gradient-red">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">Quick Turnaround</h3>
+                    <p class="whychooseus-reason-description">
+                      Fast and efficient placement process with commitment to
+                      deadlines, helping you fill positions quickly without
+                      compromising quality.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-red"
+                ></div>
+              </div>
+
+              <!-- Pan-India Presence -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-teal"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div
+                    class="whychooseus-reason-icon whychooseus-gradient-teal"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">Pan-India Presence</h3>
+                    <p class="whychooseus-reason-description">
+                      Coverage across 25+ states with strong local networks and
+                      international connections for diverse hiring needs.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-teal"
+                ></div>
+              </div>
+
+              <!-- Dedicated Support -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-pink"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div
+                    class="whychooseus-reason-icon whychooseus-gradient-pink"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">Dedicated Support</h3>
+                    <p class="whychooseus-reason-description">
+                      Personalized attention with dedicated account managers who
+                      understand your business and provide ongoing support.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-pink"
+                ></div>
+              </div>
+
+              <!-- Proven Track Record -->
+              <div class="whychooseus-reason-card">
+                <div
+                  class="whychooseus-reason-card-border whychooseus-gradient-orange"
+                ></div>
+                <div class="whychooseus-reason-card-inner"></div>
+
+                <div class="whychooseus-reason-content">
+                  <div
+                    class="whychooseus-reason-icon whychooseus-gradient-orange"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="whychooseus-reason-text">
+                    <h3 class="whychooseus-reason-title">
+                      Proven Track Record
+                    </h3>
+                    <p class="whychooseus-reason-description">
+                      Consistent success rate with 500+ successful placements
+                      and long-term client relationships built on trust.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="whychooseus-reason-corner whychooseus-gradient-orange"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Section -->
+          <div class="whychooseus-stats-wrapper">
+            <div class="whychooseus-stats-container">
+              <div class="whychooseus-stats-card">
+                <!-- Decorative elements -->
+                <div class="whychooseus-stats-decoration-topleft"></div>
+                <div class="whychooseus-stats-decoration-bottomright"></div>
+
+                <!-- Content -->
+                <div class="whychooseus-stats-content">
+                  <div class="whychooseus-stats-header">
+                    <h3 class="whychooseus-stats-heading">
+                      Our Track Record Speaks for Itself
+                    </h3>
+                    <p class="whychooseus-stats-subheading">
+                      Numbers that demonstrate our commitment to excellence
+                    </p>
+                  </div>
+
+                  <div class="whychooseus-stats-grid">
+                    <!-- States Coverage -->
+                    <div class="whychooseus-stat-item">
+                      <svg
+                        class="whychooseus-stat-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <div class="whychooseus-stat-number">25+</div>
+                      <div class="whychooseus-stat-label">States Coverage</div>
+                    </div>
+
+                    <!-- Successful Placements -->
+                    <div class="whychooseus-stat-item">
+                      <svg
+                        class="whychooseus-stat-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                        />
+                      </svg>
+                      <div class="whychooseus-stat-number">10,000+</div>
+                      <div class="whychooseus-stat-label">
+                        Successful Placements
+                      </div>
+                    </div>
+
+                    <!-- Happy Clients -->
+                    <div class="whychooseus-stat-item">
+                      <svg
+                        class="whychooseus-stat-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                        />
+                      </svg>
+                      <div class="whychooseus-stat-number">500+</div>
+                      <div class="whychooseus-stat-label">Happy Clients</div>
+                    </div>
+
+                    <!-- Satisfaction Rate -->
+                    <div class="whychooseus-stat-item">
+                      <svg
+                        class="whychooseus-stat-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <div class="whychooseus-stat-number">98%</div>
+                      <div class="whychooseus-stat-label">
+                        Satisfaction Rate
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VALUE TEAMWORK SECTION -->
+      <section class="teamwork-section">
+        <!-- Background decorations -->
+        <div class="teamwork-bg-decoration-topleft"></div>
+        <div class="teamwork-bg-decoration-bottomright"></div>
+
+        <div class="teamwork-container">
+          <!-- Header -->
+          <div class="teamwork-header">
+            <div class="teamwork-badge">
+              <svg
+                class="teamwork-badge-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+              <span class="teamwork-badge-text">Our Culture</span>
+            </div>
+
+            <h2 class="teamwork-title">We Value Team Work</h2>
+
+            <p class="teamwork-description">
+              At
+              <span class="teamwork-brand-name">Two Edge Global Solutions</span
+              >, we believe that great teams build great futures. We've created
+              an exceptional work environment where our employees thrive, grow,
+              and succeed together.
+            </p>
+
+            <div class="teamwork-divider"></div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="teamwork-main-content">
+            <div class="teamwork-content-card">
+              <!-- Decorative elements -->
+              <div class="teamwork-content-decoration-topright"></div>
+              <div class="teamwork-content-decoration-bottomleft"></div>
+
+              <div class="teamwork-content-inner">
+                <h3 class="teamwork-content-heading">
+                  Why Our Employees Love Working Here
+                </h3>
+
+                <div class="teamwork-content-grid">
+                  <div class="teamwork-content-column">
+                    <p class="teamwork-content-text">
+                      We take immense pride in providing our employees with
+                      exceptional working conditions. Our office space is
+                      thoughtfully designed to be clean, bright, and spacious,
+                      with plenty of natural light and comfortable seating
+                      arrangements that promote productivity and well-being.
+                    </p>
+                    <p class="teamwork-content-text">
+                      We equip our team with the latest technology and modern
+                      equipment, ensuring everyone has the tools they need to
+                      perform at their best and deliver outstanding results.
+                    </p>
+                  </div>
+
+                  <div class="teamwork-content-column">
+                    <p class="teamwork-content-text">
+                      Understanding the importance of work-life balance, we
+                      offer two Saturdays off each month, giving our employees
+                      time to recharge and spend quality moments with their
+                      loved ones.
+                    </p>
+                    <p class="teamwork-content-text">
+                      Our goal is to create an environment where everyone feels
+                      valued, supported, and motivated to come to work each day.
+                      We believe this commitment to excellence in workplace
+                      culture is what sets us apart.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefits Grid -->
+          <div class="teamwork-benefits-wrapper">
+            <h3 class="teamwork-benefits-heading">What We Offer Our Team</h3>
+
+            <div class="teamwork-benefits-grid">
+              <!-- Collaborative Environment -->
+              <div class="teamwork-benefit-card">
+                <div class="teamwork-benefit-icon teamwork-gradient-teal">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
+                  </svg>
+                </div>
+
+                <h4 class="teamwork-benefit-title">
+                  Collaborative Environment
+                </h4>
+
+                <p class="teamwork-benefit-description">
+                  Work alongside talented professionals in a supportive,
+                  team-oriented atmosphere where everyone's contribution
+                  matters.
+                </p>
+              </div>
+
+              <!-- Recognition & Growth -->
+              <div class="teamwork-benefit-card">
+                <div class="teamwork-benefit-icon teamwork-gradient-amber">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                    />
+                  </svg>
+                </div>
+
+                <h4 class="teamwork-benefit-title">Recognition & Growth</h4>
+
+                <p class="teamwork-benefit-description">
+                  We celebrate achievements and provide clear career progression
+                  paths with regular performance reviews and promotions.
+                </p>
+              </div>
+
+              <!-- Modern Workspace -->
+              <div class="teamwork-benefit-card">
+                <div class="teamwork-benefit-icon teamwork-gradient-blue">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+
+                <h4 class="teamwork-benefit-title">Modern Workspace</h4>
+
+                <p class="teamwork-benefit-description">
+                  Enjoy a clean, bright office with natural lighting, ergonomic
+                  furniture, and the latest technology to support your work.
+                </p>
+              </div>
+
+              <!-- Work-Life Balance -->
+              <div class="teamwork-benefit-card">
+                <div class="teamwork-benefit-icon teamwork-gradient-rose">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                </div>
+
+                <h4 class="teamwork-benefit-title">Work-Life Balance</h4>
+
+                <p class="teamwork-benefit-description">
+                  We offer two Saturdays off per month, flexible working hours,
+                  and understand the importance of personal time.
+                </p>
+              </div>
+
+              <!-- Learning & Development -->
+              <div class="teamwork-benefit-card">
+                <div class="teamwork-benefit-icon teamwork-gradient-purple">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    />
+                  </svg>
+                </div>
+
+                <h4 class="teamwork-benefit-title">Learning & Development</h4>
+
+                <p class="teamwork-benefit-description">
+                  Access to training programs, workshops, and skill development
+                  opportunities to advance your career.
+                </p>
+              </div>
+
+              <!-- Competitive Benefits -->
+              <div class="teamwork-benefit-card">
+                <div class="teamwork-benefit-icon teamwork-gradient-green">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    />
+                  </svg>
+                </div>
+
+                <h4 class="teamwork-benefit-title">Competitive Benefits</h4>
+
+                <p class="teamwork-benefit-description">
+                  Attractive compensation packages, performance bonuses, health
+                  benefits, and employee welfare programs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------CHOOSE SECTION SECOND------------------ -->
+      <section class="chooseus-section">
+        <div class="chooseus-container">
+          <div class="chooseus-wrapper">
+            <!-- Header -->
+            <div class="chooseus-header">
+              <h2 class="chooseus-title">Why Choose Us</h2>
+              <div class="chooseus-divider"></div>
+            </div>
+
+            <!-- Flowchart -->
+            <div class="chooseus-flowchart">
+              <div class="chooseus-flowchart-grid">
+                <!-- Job Sectors Box -->
+                <div class="chooseus-box chooseus-box-sectors">
+                  <h3 class="chooseus-box-title chooseus-box-title-sectors">
+                    Job Sectors
+                  </h3>
+                  <ul class="chooseus-list">
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-sectors"
+                        >Banking & Finance</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-sectors"
+                        >IT & Technology</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-sectors">Healthcare</span>
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-sectors"
+                        >Manufacturing</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-sectors"
+                        >Retail & E-commerce</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-sectors"
+                        >Hospitality</span
+                      >
+                    </li>
+                  </ul>
+                  <!-- Arrow -->
+                  <div class="chooseus-arrow">
+                    <svg
+                      class="chooseus-arrow-icon chooseus-arrow-amber"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="10" stroke-width="2" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 8l4 4-4 4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Functions Box -->
+                <div class="chooseus-box chooseus-box-functions">
+                  <h3 class="chooseus-box-title chooseus-box-title-functions">
+                    Functions
+                  </h3>
+                  <ul class="chooseus-list">
+                    <li class="chooseus-list-item">
+                      <span class="chooseus-bullet chooseus-bullet-dark"></span>
+                      <span class="chooseus-list-text-functions"
+                        >Sales & Marketing</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span class="chooseus-bullet chooseus-bullet-dark"></span>
+                      <span class="chooseus-list-text-functions"
+                        >Human Resources</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span class="chooseus-bullet chooseus-bullet-dark"></span>
+                      <span class="chooseus-list-text-functions"
+                        >Finance & Accounting</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span class="chooseus-bullet chooseus-bullet-dark"></span>
+                      <span class="chooseus-list-text-functions"
+                        >Operations</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span class="chooseus-bullet chooseus-bullet-dark"></span>
+                      <span class="chooseus-list-text-functions"
+                        >Engineering</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span class="chooseus-bullet chooseus-bullet-dark"></span>
+                      <span class="chooseus-list-text-functions"
+                        >Customer Service</span
+                      >
+                    </li>
+                  </ul>
+                  <!-- Arrow -->
+                  <div class="chooseus-arrow">
+                    <svg
+                      class="chooseus-arrow-icon chooseus-arrow-slate"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="10" stroke-width="2" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 8l4 4-4 4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Our Services Box -->
+                <div class="chooseus-box chooseus-box-services">
+                  <h3 class="chooseus-box-title chooseus-box-title-services">
+                    Our Services
+                  </h3>
+                  <ul class="chooseus-list">
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-services"
+                        >Permanent Hiring</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-services"
+                        >Contract Staffing</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-services"
+                        >Executive Search</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-services"
+                        >Bulk Recruitment</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-services"
+                        >Payroll Management</span
+                      >
+                    </li>
+                    <li class="chooseus-list-item">
+                      <span
+                        class="chooseus-bullet chooseus-bullet-amber"
+                      ></span>
+                      <span class="chooseus-list-text-services"
+                        >HR Consulting</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Management Levels Text -->
+            <div class="chooseus-management-text">
+              <p class="chooseus-management-title">
+                We Hire at Senior, Middle & Junior Management Levels
+              </p>
+            </div>
+
+            <!-- Job Hunting & Business Enquiry Cards -->
+            <div class="chooseus-cards-grid">
+              <!-- Job Hunting Card -->
+              <div class="chooseus-card-wrapper">
+                <div class="chooseus-card chooseus-card-job">
+                  <div class="chooseus-card-icon-wrapper">
+                    <div class="chooseus-card-icon-bg">
+                      <svg
+                        class="chooseus-card-icon"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <p class="chooseus-card-intro">
+                    We Create Exemplary Opportunities for Candidates &
+                    Businesses, by Virtue of the Large Variety of Services We
+                    are able to Provide across various Industry Verticals.
+                  </p>
+
+                  <h3 class="chooseus-card-heading">Job Hunting?</h3>
+
+                  <p class="chooseus-card-description">
+                    If you are fresh out of college, an entry-level executive, a
+                    senior executive or someone in a very senior level
+                    managerial or leadership role and you are looking for a
+                    change in your work profile or job then you are at the right
+                    place.
+                  </p>
+
+                  <div class="chooseus-card-button-wrapper">
+                    <button
+                      class="chooseus-card-button chooseus-card-button-job"
+                      onclick="chooseusReachOut()"
+                    >
+                      REACH OUT TO US
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Business Enquiry Card -->
+              <div class="chooseus-card-wrapper">
+                <div class="chooseus-card chooseus-card-business">
+                  <div class="chooseus-card-icon-wrapper">
+                    <div class="chooseus-card-icon-bg">
+                      <svg
+                        class="chooseus-card-icon"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <p class="chooseus-card-intro">
+                    We are absolutely committed to finding and placing
+                    candidates into the best possible roles with companies based
+                    on their requirements & interests.
+                  </p>
+
+                  <h3 class="chooseus-card-heading">Business Enquiry?</h3>
+
+                  <p class="chooseus-card-description">
+                    If you are a startup, a one-person company, an established
+                    family business, a private limited company, a limited
+                    company or a Multi-National Company and you are looking for
+                    great talent feel free to contact us.
+                  </p>
+
+                  <div class="chooseus-card-button-wrapper">
+                    <button
+                      class="chooseus-card-button chooseus-card-button-business"
+                      onclick="chooseusMakeEnquiry()"
+                    >
+                      MAKE AN ENQUIRY
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------CLIENT SAYS SECTION---------------------------------- -->
+      <section class="clientsays-section">
+        <!-- Background decorations -->
+        <div class="clientsays-bg-decoration-topright"></div>
+        <div class="clientsays-bg-decoration-bottomleft"></div>
+
+        <div class="clientsays-container">
+          <!-- Header -->
+          <div class="clientsays-header">
+            <div class="clientsays-badge">
+              <svg
+                class="clientsays-badge-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                />
+              </svg>
+              <span class="clientsays-badge-text">Client Success Stories</span>
+            </div>
+
+            <h2 class="clientsays-title">What Our Clients Say</h2>
+
+            <p class="clientsays-description">
+              Don't just take our word for it - hear from the companies and
+              professionals who've experienced our exceptional recruitment
+              services
+            </p>
+
+            <div class="clientsays-divider"></div>
+          </div>
+
+          <!-- Stats Bar -->
+          <div class="clientsays-stats-wrapper">
+            <div class="clientsays-stats-grid">
+              <div class="clientsays-stat-item">
+                <svg
+                  class="clientsays-stat-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <div class="clientsays-stat-number">500+</div>
+                <div class="clientsays-stat-label">Happy Clients</div>
+              </div>
+
+              <div class="clientsays-stat-item">
+                <svg
+                  class="clientsays-stat-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <div class="clientsays-stat-number">10,000+</div>
+                <div class="clientsays-stat-label">Placements Made</div>
+              </div>
+
+              <div class="clientsays-stat-item">
+                <svg
+                  class="clientsays-stat-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <div class="clientsays-stat-number">98%</div>
+                <div class="clientsays-stat-label">Satisfaction Rate</div>
+              </div>
+
+              <div class="clientsays-stat-item">
+                <svg
+                  class="clientsays-stat-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                  />
+                </svg>
+                <div class="clientsays-stat-number">5.0</div>
+                <div class="clientsays-stat-label">Average Rating</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel -->
+          <div class="clientsays-carousel-wrapper">
+            <div class="clientsays-carousel-container">
+              <div class="clientsays-carousel-content">
+                <div
+                  class="clientsays-testimonials-grid"
+                  id="clientsaysTestimonialsGrid"
+                >
+                  <!-- Testimonials will be inserted here by JavaScript -->
+                </div>
+              </div>
+
+              <!-- Navigation Buttons -->
+              <button
+                class="clientsays-nav-button clientsays-nav-button-prev"
+                onclick="clientsaysPrevPage()"
+                aria-label="Previous testimonials"
+              >
+                <svg
+                  class="clientsays-nav-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <button
+                class="clientsays-nav-button clientsays-nav-button-next"
+                onclick="clientsaysNextPage()"
+                aria-label="Next testimonials"
+              >
+                <svg
+                  class="clientsays-nav-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Dots Indicator -->
+            <div class="clientsays-dots" id="clientsaysDots">
+              <!-- Dots will be inserted here by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -----------------GET IN TOUCH SECTION-------------------------------------- -->
+
+      <section class="getintouch-section">
+        <div class="getintouch-container">
+          <!-- Header -->
+          <div class="getintouch-header">
+            <h2 class="getintouch-title">Get In Touch</h2>
+            <p class="getintouch-description">
+              Ready to transform your hiring process? Contact us today
+            </p>
+            <div class="getintouch-divider"></div>
+          </div>
+
+          <!-- Main Grid -->
+          <div class="getintouch-grid">
+            <!-- Contact Form -->
+            <div>
+              <div class="getintouch-form-card">
+                <form
+                  class="getintouch-form"
+                  id="getintouchForm"
+                  onsubmit="getintouchHandleSubmit(event)"
+                >
+                  <!-- Name and Email Row -->
+                  <div class="getintouch-form-row">
+                    <div class="getintouch-form-group">
+                      <label for="getintouchName" class="getintouch-label"
+                        >Full Name *</label
+                      >
+                      <input
+                        type="text"
+                        id="getintouchName"
+                        class="getintouch-input"
+                        placeholder="John Doe"
+                        required
+                      />
+                    </div>
+                    <div class="getintouch-form-group">
+                      <label for="getintouchEmail" class="getintouch-label"
+                        >Email Address *</label
+                      >
+                      <input
+                        type="email"
+                        id="getintouchEmail"
+                        class="getintouch-input"
+                        placeholder="john@company.com"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Company Name -->
+                  <div class="getintouch-form-group">
+                    <label for="getintouchCompany" class="getintouch-label"
+                      >Company Name</label
+                    >
+                    <input
+                      type="text"
+                      id="getintouchCompany"
+                      class="getintouch-input"
+                      placeholder="Your Company"
+                    />
+                  </div>
+
+                  <!-- Message -->
+                  <div class="getintouch-form-group">
+                    <label for="getintouchMessage" class="getintouch-label"
+                      >Message *</label
+                    >
+                    <textarea
+                      id="getintouchMessage"
+                      class="getintouch-textarea"
+                      placeholder="Tell us about your recruitment needs..."
+                      rows="6"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <!-- CAPTCHA -->
+                  <div class="getintouch-form-group">
+                    <label class="getintouch-label"
+                      >Security Verification *</label
+                    >
+                    <div class="getintouch-captcha-container">
+                      <div class="getintouch-captcha-content">
+                        <p class="getintouch-captcha-label">What is:</p>
+                        <p
+                          class="getintouch-captcha-question"
+                          id="getintouchCaptchaQuestion"
+                        ></p>
+                        <input
+                          type="text"
+                          id="getintouchCaptchaInput"
+                          class="getintouch-input"
+                          placeholder="Enter your answer"
+                          required
+                        />
+                        <p
+                          class="getintouch-captcha-error"
+                          id="getintouchCaptchaError"
+                        ></p>
+                      </div>
+                      <button
+                        type="button"
+                        class="getintouch-captcha-refresh"
+                        onclick="getintouchGenerateCaptcha()"
+                        title="Refresh CAPTCHA"
+                      >
+                        <svg
+                          class="getintouch-refresh-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button type="submit" class="getintouch-submit-button">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="getintouch-sidebar">
+              <!-- Contact Info Card -->
+              <div class="getintouch-info-card">
+                <!-- Email -->
+                <div class="getintouch-info-item">
+                  <div class="getintouch-info-icon amber">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="getintouch-info-label">Email</p>
+                    <p class="getintouch-info-value">info@twoedgeglobal.com</p>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="getintouch-info-item">
+                  <div class="getintouch-info-icon slate">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="getintouch-info-label">Phone</p>
+                    <p class="getintouch-info-value">+91 9399219240</p>
+                  </div>
+                </div>
+
+                <!-- Office -->
+                <div class="getintouch-info-item">
+                  <div class="getintouch-info-icon amber">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="getintouch-info-label">Office</p>
+                    <p class="getintouch-info-value">
+                      216 A Sundar Nagar Main Sukhliya Indore, Heera Nagar Thane
+                      Ke Pass, Indore
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Working Hours Card -->
+              <div class="getintouch-hours-card">
+                <div class="getintouch-hours-header">
+                  <div class="getintouch-hours-icon-wrapper">
+                    <svg
+                      class="getintouch-hours-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="getintouch-hours-title">Working Hours</h3>
+                </div>
+                <div class="getintouch-hours-list">
+                  <div class="getintouch-hours-item">
+                    <span>Monday</span>
+                    <span class="getintouch-hours-time"
+                      >10:00 AM - 7:00 PM</span
+                    >
+                  </div>
+                  <div class="getintouch-hours-item">
+                    <span>Tuesday</span>
+                    <span class="getintouch-hours-time"
+                      >10:00 AM - 7:00 PM</span
+                    >
+                  </div>
+                  <div class="getintouch-hours-item">
+                    <span>Wednesday</span>
+                    <span class="getintouch-hours-time"
+                      >10:00 AM - 7:00 PM</span
+                    >
+                  </div>
+                  <div class="getintouch-hours-item">
+                    <span>Thursday</span>
+                    <span class="getintouch-hours-time"
+                      >10:00 AM - 7:00 PM</span
+                    >
+                  </div>
+                  <div class="getintouch-hours-item">
+                    <span>Friday</span>
+                    <span class="getintouch-hours-time"
+                      >10:00 AM - 7:00 PM</span
+                    >
+                  </div>
+                  <div class="getintouch-hours-item">
+                    <span>Saturday</span>
+                    <span class="getintouch-hours-time"
+                      >10:00 AM - 7:00 PM</span
+                    >
+                  </div>
+                  <div class="getintouch-hours-item">
+                    <span>Sunday</span>
+                    <span class="getintouch-hours-closed">Closed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact CTA Section -->
       <section class="section section-cta">
         <div class="container">
@@ -844,12 +2441,10 @@
               Let's discuss how we can help you achieve your recruitment goals
             </p>
             <div class="cta-buttons">
-              <button
-                class="btn btn-primary btn-lg"
-                onclick="openModal('getStartedModal')"
-              >
+              <a href="get-started.html" class="btn btn-primary btn-lg">
                 Get Started Today
-              </button>
+              </a>
+
               <a href="contact.html" class="btn btn-outline-white btn-lg"
                 >Contact Us</a
               >

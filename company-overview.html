@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Overview - Two Edge Global Solutions</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+  </head>
+
+  <body>
+    <!-- ================= WIDGET ROOTS ================= -->
+    <div id="header-root"></div>
+    <div id="modal-root"></div>
+    <div id="ud-loader"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <h1>Company <span class="brand-name">Overview</span></h1>
+          <p>
+            Understanding who we are, what we do, and why organizations trust us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTENT ================= -->
+    <section class="about-hero-section">
+      <div class="container">
+        <div style="max-width: 56rem; margin: 0 auto">
+          <h2 class="section-title" style="text-align: center">Who We Are</h2>
+
+          <div
+            style="
+              width: 6rem;
+              height: 4px;
+              background: #f59e0b;
+              margin: 0 auto 2rem;
+            "
+          ></div>
+
+          <p class="text-muted">
+            <strong class="brand-name-inline">Two Edge Global Solutions</strong>
+            is a recruitment and staffing organization dedicated to connecting
+            skilled professionals with organizations that value talent,
+            performance, and growth.
+          </p>
+
+          <p class="text-muted">
+            We deliver customized hiring solutions including permanent
+            recruitment, contract staffing, executive search, and HR consulting —
+            built on trust, transparency, and long-term partnerships.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Let’s Build Strong Teams Together</h2>
+          <p class="cta-description">
+            Partner with us for reliable and future-ready recruitment solutions.
+          </p>
+
+          <button
+            class="btn btn-primary btn-lg"
+            onclick="openModal('getStartedModal')"
+          >
+            Get Started Today
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-root"></div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="js/loader.js"></script>
+
+    <script>
+      /* Load Under Development Modal */
+      fetch("underdevelopment.html")
+        .then((r) => r.text())
+        .then(
+          (html) => (document.getElementById("ud-loader").innerHTML = html)
+        );
+
+      /* Load Get Started Modal */
+      fetch("modals/get-started-modal.html")
+        .then((r) => r.text())
+        .then(
+          (html) => (document.getElementById("modal-root").innerHTML = html)
+        );
+
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      document.addEventListener("click", (e) => {
+        if (e.target.closest("[data-close]")) {
+          document
+            .querySelectorAll(".modal.active")
+            .forEach((m) => m.classList.remove("active"));
+          document.body.style.overflow = "";
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document
+            .querySelectorAll(".modal.active")
+            .forEach((m) => m.classList.remove("active"));
+          document.body.style.overflow = "";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Values - Two Edge Global Solutions</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+  </head>
+  <div id="ud-loader"></div>
+  <div id="modal-root"></div>
+
+  <script>
+    // Load modal HTML
+    fetch("underdevelopment.html")
+      .then((r) => r.text())
+      .then((html) => {
+        document.getElementById("ud-loader").innerHTML = html;
+      });
+
+    // OPEN modal (global)
+    function udOpenModal() {
+      const modal = document.getElementById("underDevelopmentModal");
+      if (modal) {
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    }
+
+    // CLOSE modal
+    function udCloseModal() {
+      const modal = document.getElementById("underDevelopmentModal");
+      if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    }
+
+    // CLICK delegation (WORKS FOR FETCHED HTML)
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("[data-ud-close]")) {
+        udCloseModal();
+      }
+    });
+
+    // ESC key support
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        udCloseModal();
+      }
+    });
+  </script>
+
+  <body>
+    <!-- ================= NAVIGATION ================= -->
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <div class="logo-container">
+            <a href="/">
+              <img
+                src="/logo.png"
+                alt="Two Edge Global Solutions"
+                class="logo"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-links desktop-nav">
+            <a href="index.html" class="nav-link">Home</a>
+
+            <!-- About Us Dropdown -->
+            <div class="nav-dropdown">
+              <a href="about.html" class="nav-link dropdown-toggle">
+                About Us
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="company-overview.html">Company Overview</a>
+                <a href="mission-vision.html">Vision & Mission</a>
+                <a href="our-values.html">Our Values</a>
+              </div>
+            </div>
+
+            <!-- Team TEGS Dropdown -->
+            <div class="nav-dropdown">
+              <a href="#" class="nav-link dropdown-toggle">
+                Team TEGS
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Leadership</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Recruiters</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Careers</a
+                >
+              </div>
+            </div>
+
+            <!-- Services Dropdown -->
+            <div class="nav-dropdown">
+              <a href="services.html" class="nav-link dropdown-toggle">
+                Services
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Talent Acquisition</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Staffing Solutions</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Executive Search</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >HR Consulting</a
+                >
+              </div>
+            </div>
+
+            <!-- Others Dropdown -->
+            <div class="nav-dropdown">
+              <a href="others.html" class="nav-link dropdown-toggle">
+                Others
+                <span class="dropdown-arrow">▾</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" onclick="openModal('underDevelopmentModal')"
+                  >Blog</a
+                >
+                <a href="#" onclick="openModal('underDevelopmentModal')">FAQ</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-primary"
+              onclick="openModal('getStartedModal')"
+            >
+              Get Started
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="mobile-menu-btn"
+            onclick="toggleMobileMenu()"
+            id="mobileMenuBtn"
+          >
+            <svg
+              class="menu-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg
+              class="close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="display: none"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a
+            href="#services"
+            class="nav-link"
+            onclick="
+              scrollToSection('services', event);
+              toggleMobileMenu();
+            "
+            >Services</a
+          >
+          <a href="contact.html" class="nav-link">Contact</a>
+          <button
+            class="btn btn-primary"
+            onclick="
+              openModal('getStartedModal');
+              toggleMobileMenu();
+            "
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-content">
+          <h1>Our <span class="brand-name">Values</span></h1>
+          <p>The principles that guide our culture and decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VALUES ================= -->
+    <section style="padding: 4rem 0; background: #ffffff">
+      <div class="container">
+        <div
+          style="
+            max-width: 72rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+          "
+        >
+          <div class="about-value-card">
+            <h3>Integrity</h3>
+            <p>
+              We operate with honesty, transparency, and strong ethical
+              standards in every interaction.
+            </p>
+          </div>
+
+          <div class="about-value-card">
+            <h3>Excellence</h3>
+            <p>
+              We strive to exceed expectations through quality, precision, and
+              consistent delivery.
+            </p>
+          </div>
+
+          <div class="about-value-card">
+            <h3>Innovation</h3>
+            <p>
+              We embrace modern recruitment practices and continuously improve
+              our processes.
+            </p>
+          </div>
+
+          <div class="about-value-card">
+            <h3>Client Focus</h3>
+            <p>
+              We listen, understand, and tailor solutions that align with our
+              clients’ goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Values That Build Trust</h2>
+          <p class="cta-description">
+            Experience recruitment driven by integrity and excellence.
+          </p>
+          <button
+            class="btn btn-primary btn-lg"
+            onclick="openModal('getStartedModal')"
+          >
+            Work With Us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col footer-col-wide">
+            <img
+              src="/logo.png"
+              alt="Two Edge Global Solutions"
+              class="footer-logo"
+            />
+            <p class="footer-description">
+              Your trusted global recruitment and staffing partner, providing
+              reliable human resource solutions that empower businesses and
+              careers.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Services</h4>
+            <ul class="footer-links">
+              <li><a href="services.html">Talent Acquisition</a></li>
+              <li><a href="services.html">Staffing Solutions</a></li>
+              <li><a href="services.html">Executive Search</a></li>
+              <li><a href="services.html">HR Consulting</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            © 2026
+            <span class="brand-name-inline">Two Edge Global Solutions</span>.
+            All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="cookie-policy.html">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
