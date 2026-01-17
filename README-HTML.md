@@ -54,7 +54,7 @@ This is the pure HTML, CSS, and JavaScript version of the Two Edge Global Soluti
 
 ### Contact Information
 - **Phone**: +91 9109125765 , +91 9399219240
-- **Email**: twoedgeglobal@gmail.com
+- **Email**: twoedgeglobal@proton.me
 - **Address**: Vijay nagar near C21 mall , Indore
 - **Hours**: Monday-Saturday 10 AM - 7 PM, Closed Sundays
 
@@ -129,7 +129,7 @@ To create the remaining policy pages (Terms of Service, Cookie Policy), copy the
 ## Support
 
 For questions or issues, contact:
-- Email: twoedgeglobal@gmail.com
+- Email: twoedgeglobal@proton.me
 - Phone: +91 9109125765 , +91 9399219240
 
 ---

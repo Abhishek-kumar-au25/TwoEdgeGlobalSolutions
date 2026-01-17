@@ -401,4 +401,4 @@ console.log(
   "font-size: 24px; font-weight: bold; background: linear-gradient(to right, #fbe8af, #9c714b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;",
 );
 console.log("Website built with HTML, CSS, and JavaScript");
-console.log("For inquiries: twoedgeglobal@gmail.com");
+console.log("For inquiries: twoedgeglobal@proton.me");
