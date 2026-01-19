@@ -1,28 +1,46 @@
-<nav id="navbar" class="navbar">
+<nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
   <div class="container">
     <div class="nav-content">
+      <!-- Logo -->
       <div class="logo-container">
-        <a href="index.html">
-          <img src="/logo.png" class="logo" alt="Two Edge Global Solutions">
+        <a href="../index.html" aria-label="Two Edge Global Solutions home">
+          <img
+            src="../assets/logo.png"
+            class="logo"
+            alt="Two Edge Global Solutions logo"
+          />
         </a>
       </div>
 
+      <!-- Desktop Navigation -->
       <div class="nav-links desktop-nav">
-        <a href="index.html" class="nav-link">Home</a>
+        <a href="../index.html" class="nav-link">Home</a>
 
+        <!-- About -->
         <div class="nav-dropdown">
-          <a href="about.html" class="nav-link dropdown-toggle">
+          <a
+            href="../Pages/about.html"
+            class="nav-link dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             About Us <span class="dropdown-arrow">▾</span>
           </a>
           <div class="dropdown-menu">
-            <a href="company-overview.html">Company Overview</a>
-            <a href="mission-vision.html">Vision & Mission</a>
-            <a href="our-values.html">Our Values</a>
+            <a href="../Pages/company-overview.html">Company Overview</a>
+            <a href="../Pages/mission-vision.html">Vision & Mission</a>
+            <a href="../Pages/our-values.html">Our Values</a>
           </div>
         </div>
 
+        <!-- Team -->
         <div class="nav-dropdown">
-          <a href="#" class="nav-link dropdown-toggle">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Team TEGS <span class="dropdown-arrow">▾</span>
           </a>
           <div class="dropdown-menu">
@@ -32,8 +50,14 @@
           </div>
         </div>
 
+        <!-- Services -->
         <div class="nav-dropdown">
-          <a href="services.html" class="nav-link dropdown-toggle">
+          <a
+            href="../Pages/services.html"
+            class="nav-link dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Services <span class="dropdown-arrow">▾</span>
           </a>
           <div class="dropdown-menu">
@@ -44,18 +68,29 @@
           </div>
         </div>
 
+        <!-- Others -->
         <div class="nav-dropdown">
-          <a href="others.html" class="nav-link dropdown-toggle">
+          <a
+            href="../Pages/others.html"
+            class="nav-link dropdown-toggle"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             Others <span class="dropdown-arrow">▾</span>
           </a>
           <div class="dropdown-menu">
             <a href="#" onclick="openModal('underDevelopmentModal')">Blog</a>
             <a href="#" onclick="openModal('underDevelopmentModal')">FAQ</a>
-            <a href="contact.html">Contact</a>
+            <a href="../Pages/contact.html">Contact</a>
           </div>
         </div>
 
-        <button class="btn btn-primary" onclick="openModal('getStartedModal')">
+        <!-- CTA -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="openModal('getStartedModal')"
+        >
           Get Started
         </button>
       </div>

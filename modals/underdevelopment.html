@@ -1,9 +1,42 @@
-<div id="underDevelopmentModal" class="modal">
+<!-- <div id="underDevelopmentModal" class="modal">
   <div class="modal-overlay" data-close></div>
   <div class="modal-content">
     <button class="modal-close" data-close>✕</button>
     <h2>Under Development</h2>
     <p>This section is currently under development.</p>
     <button class="btn btn-primary" data-close>Got it</button>
+  </div>
+</div> -->
+
+<div
+  id="underDevelopmentModal"
+  class="modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="underDevTitle"
+>
+  <!-- Overlay -->
+  <div class="modal-overlay" data-close></div>
+
+  <!-- Modal Content -->
+  <div class="modal-content" role="document">
+    <button
+      class="modal-close"
+      data-close
+      aria-label="Close modal"
+    >
+      ✕
+    </button>
+
+    <h2 id="underDevTitle">Under Development</h2>
+    <p>This section is currently under development.</p>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-close
+    >
+      Got it
+    </button>
   </div>
 </div>

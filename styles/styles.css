@@ -639,13 +639,14 @@ body {
   }
 }
 
-/* Footer */
 .footer {
   background: linear-gradient(to bottom right, #474e60, #0c1320);
   color: #d1d5db;
   padding: 3rem 0;
   border-top: 2px solid rgba(245, 158, 11, 0.3);
 }
+
+/* ================= GRID ================= */
 
 .footer-grid {
   display: grid;
@@ -664,11 +665,7 @@ body {
   grid-column: span 1;
 }
 
-@media (min-width: 768px) {
-  .footer-col-wide {
-    grid-column: span 1;
-  }
-}
+/* ================= BRAND ================= */
 
 .footer-logo {
   height: 12rem;
@@ -682,14 +679,18 @@ body {
   max-width: 28rem;
 }
 
+/* ================= LINKS ================= */
+
 .footer-title {
-  color: white;
+  color: #ffffff;
   font-size: 1.125rem;
   margin-bottom: 1rem;
 }
 
 .footer-links {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
@@ -699,10 +700,10 @@ body {
 .footer-links a {
   color: #d1d5db;
   text-decoration: none;
-  transition: color 0.3s;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: color 0.3s;
 }
 
 .footer-links a::before {
@@ -716,6 +717,8 @@ body {
 .footer-links a:hover {
   color: #fbbf24;
 }
+
+/* ================= SOCIAL ================= */
 
 .footer-social {
   display: flex;
@@ -739,9 +742,11 @@ body {
 
 .social-link:hover {
   background: linear-gradient(to bottom right, #f59e0b, #d97706);
-  color: white;
+  color: #ffffff;
   box-shadow: 0 6px 12px rgba(245, 158, 11, 0.2);
 }
+
+/* ================= FOOTER BOTTOM ================= */
 
 .footer-bottom {
   display: flex;
@@ -764,6 +769,8 @@ body {
   font-size: 0.875rem;
 }
 
+/* ================= LEGAL LINKS (FIX) ================= */
+
 .footer-legal {
   display: flex;
   gap: 1.5rem;
@@ -773,12 +780,23 @@ body {
 .footer-legal a {
   color: #d1d5db;
   text-decoration: none;
+  position: relative;
+  padding-right: 1.5rem;
   transition: color 0.3s;
+}
+
+.footer-legal a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: 0.6rem;
+  color: #64748b;
 }
 
 .footer-legal a:hover {
   color: #fbbf24;
 }
+
+/* ================= NOTE ================= */
 
 .footer-note {
   color: #64748b;
@@ -792,6 +810,7 @@ body {
     text-align: left;
   }
 }
+
 
 /* Floating Join Button */
 .floating-join-btn {
@@ -857,143 +876,185 @@ body {
 }
 
 /* Modal */
+/* ================= MODAL BASE ================= */
+
 .modal {
-  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  inset: 0;
+  z-index: 999;
+  display: none;
 }
 
 .modal.active {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* ================= OVERLAY ================= */
 
 .modal-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
   backdrop-filter: blur(4px);
 }
 
-.modal-content {
+/* ================= CONTENT ================= */
+
+.modal-pretty {
   position: relative;
-  background: white;
-  border-radius: 1rem;
-  padding: 2rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8fafc 100%
+  );
   width: 100%;
-  max-width: 42rem;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  margin: 1rem;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  animation: modalPop 0.35s ease;
 }
+
+/* ================= ANIMATION ================= */
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= CLOSE ================= */
 
 .modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: none;
   border: none;
-  padding: 0.5rem;
+  background: #f1f5f9;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  font-size: 1rem;
   cursor: pointer;
-  color: #475569;
-  transition: all 0.3s;
-  border-radius: 9999px;
+  transition: all 0.2s ease;
 }
 
 .modal-close:hover {
-  background: #f1f5f9;
+  background: #f59e0b;
+  color: white;
 }
 
+/* ================= HEADER ================= */
+
 .modal-header {
+  text-align: center;
   margin-bottom: 2rem;
 }
 
 .modal-header h2 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: #0f172a;
-  margin-bottom: 0.75rem;
 }
 
 .modal-header p {
-  font-size: 1.125rem;
+  margin-top: 0.5rem;
   color: #64748b;
+  font-size: 0.95rem;
 }
 
 .modal-divider {
-  width: 6rem;
+  width: 4rem;
   height: 0.25rem;
-  background: linear-gradient(to right, #f59e0b, #d97706);
-  margin-top: 1rem;
+  margin: 1.25rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #f59e0b,
+    #d97706
+  );
 }
 
-/* Forms */
-.modal-form {
+/* ================= FORM ================= */
+
+.pretty-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 640px) {
-  .form-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  gap: 1.25rem;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #475569;
-  margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .form-group input,
-.form-group select,
 .form-group textarea {
-  padding: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 0.9rem;
+  border-radius: 0.75rem;
   border: 1px solid #cbd5e1;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  transition: all 0.3s;
-  font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+  background: white;
+  font-size: 0.95rem;
   outline: none;
-  border-color: #f59e0b;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+  transition: all 0.2s ease;
 }
 
 .form-group textarea {
-  resize: vertical;
+  resize: none;
 }
 
-.form-submit {
-  display: flex;
-  justify-content: center;
+.form-group label {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  pointer-events: none;
+  transition: all 0.2s ease;
 }
+
+/* FLOATING LABEL */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -0.45rem;
+  font-size: 0.7rem;
+  color: #f59e0b;
+}
+
+/* INPUT FOCUS */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+/* ================= BUTTON ================= */
+
+.w-full {
+  width: 100%;
+}
+
+.btn-lg {
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+}
+
 
 /* Contact Page Styles */
 .page-hero {

@@ -16,7 +16,7 @@ This is your complete, cleaned HTML/CSS/JavaScript website with NO unused code.
 ├── privacy-policy.html     ✅ Privacy Policy page (Complete)
 ├── terms-of-service.html   ✅ Terms of Service page (Complete)
 ├── cookie-policy.html      ✅ Cookie Policy page (Complete)
-├── styles.css              ✅ All CSS styling (Complete)
+├── styles/styles.css              ✅ All CSS styling (Complete)
 └── script.js               ✅ All JavaScript (Complete)
 ```
 
@@ -72,13 +72,13 @@ This is your complete, cleaned HTML/CSS/JavaScript website with NO unused code.
 ✅ Professional design
 
 ### Contact Information
-✅ Phone: +91 9109125765 , +91 9399219240
+✅ Phone: +91 9109125765 , +91 9399219240 | +91 9109125765
 ✅ Email: twoedgeglobal@proton.me
 ✅ Address: Vijay nagar near C21 mall Indore
 ✅ Hours: Mon-Sat 10 AM - 7 PM, Closed Sundays
 ✅ LinkedIn: twoedge-solutions-0783b0397
 ✅ Instagram: tegs_twoedgeglobalsolution
-✅ WhatsApp: +91 9109125765 , +91 9399219240
+✅ WhatsApp: +91 9109125765 , +91 9399219240 | +91 9109125765
 
 ---
 
@@ -257,7 +257,7 @@ All contact information is correctly displayed on:
 This code is production-ready. Simply upload all files to your web server:
 
 1. Upload all .html files to root directory
-2. Upload styles.css to root directory
+2. Upload styles/styles.css to root directory
 3. Upload script.js to root directory
 4. No build process needed
 5. No dependencies to install
@@ -272,7 +272,7 @@ This code is production-ready. Simply upload all files to your web server:
 - privacy-policy.html: ~12 KB
 - terms-of-service.html: ~14 KB
 - cookie-policy.html: ~13 KB
-- styles.css: ~38 KB
+- styles/styles.css: ~38 KB
 - script.js: ~12 KB
 
 **Total: ~139 KB** (excluding images)
