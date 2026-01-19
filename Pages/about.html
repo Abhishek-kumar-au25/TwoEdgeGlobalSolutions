@@ -10,6 +10,10 @@
     <link rel="icon" href="../assets/logo.png" />
     <link rel="apple-touch-icon" href="../assets/logo.png" />
   </head>
+  <div id="modal-root"></div>
+  <div id="ud-loader"></div>
+
+  <script src="/Javascript/modal.js"></script>
 
   <body>
     <!-- ================= HEADER ================= -->
@@ -83,18 +87,20 @@
         <div class="cta-content">
           <h2 class="cta-title">Ready to Transform Your Workforce?</h2>
           <p class="cta-description">
-            Let’s discuss how we can help you achieve your recruitment goals.
+            Let's discuss how we can help you achieve your recruitment goals
           </p>
 
           <div class="cta-buttons">
+            <!-- FIXED BUTTON -->
             <button
+              type="button"
               class="btn btn-primary btn-lg"
               onclick="openModal('getStartedModal')"
             >
               Get Started Today
             </button>
 
-            <a href="../Pages/contact.html" class="btn btn-outline-white btn-lg">
+            <a href="/Pages/contact.html" class="btn btn-outline-white btn-lg">
               Contact Us
             </a>
           </div>
