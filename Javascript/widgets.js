@@ -17,3 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
   loadWidget("modal-root", "modals/get-started-modal.html");
   loadWidget("ud-loader", "modals/underdevelopment.html");
 });
+
+function loadFloatingButton() {
+  fetch("../modals/floatingbutton.html")
+    .then((res) => {
+      if (!res.ok) throw new Error("Floating button not found");
+      return res.text();
+    })
+    .then((html) => {
+      const root = document.getElementById("floating-button-root");
+      if (root) root.innerHTML = html;
+    })
+    .catch((err) => console.error(err));
+}
+
+document.addEventListener("DOMContentLoaded", loadFloatingButton);
+
