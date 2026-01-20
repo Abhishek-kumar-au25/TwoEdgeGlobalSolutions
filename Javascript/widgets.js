@@ -33,3 +33,24 @@ function loadFloatingButton() {
 
 document.addEventListener("DOMContentLoaded", loadFloatingButton);
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Load Header
+  fetch("../Widgets/header.html")
+    .then((res) => res.text())
+    .then((data) => {
+      const header = document.getElementById("header-root");
+      if (header) header.innerHTML = data;
+    })
+    .catch((err) => console.error("Header load failed", err));
+
+  // Load Footer
+  fetch("../Widgets/footer.html")
+    .then((res) => res.text())
+    .then((data) => {
+      const footer = document.getElementById("footer-root");
+      if (footer) footer.innerHTML = data;
+    })
+    .catch((err) => console.error("Footer load failed", err));
+});
+
+
