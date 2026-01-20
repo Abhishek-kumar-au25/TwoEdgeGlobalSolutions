@@ -28,89 +28,85 @@ if (slides.length) {
 }
 
 // Testimonials data
-const clientsaysTestimonials = [
+// 1️⃣ Define teamImages FIRST
+const teamImages = [
   {
-    name: "Rajesh Kumar",
-    position: "HR Manager",
-    company: "Tech Solutions Pvt. Ltd.",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "Two Edge Global Solutions has been instrumental in helping us find top-tier talent. Their understanding of our requirements and quick turnaround time is exceptional. Highly recommend their services!",
+    image: "../assets/1.jpeg",
   },
   {
-    name: "Priya Sharma",
-    position: "Operations Director",
-    company: "Manufacturing Excellence Ltd.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "We've been working with Two Edge Global Solutions for over 2 years now. Their professionalism, attention to detail, and ability to understand our staffing needs is unmatched. They're more than a vendor - they're a partner.",
+    image: "../assets/2.jpeg",
+
   },
   {
-    name: "Amit Patel",
-    position: "CEO",
-    company: "Digital Innovations Inc.",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "The team at Two Edge Global Solutions helped us scale our workforce efficiently. Their bulk hiring solutions saved us time and resources while maintaining quality. Outstanding service from start to finish!",
+    image: "../assets/3.jpeg",
+
   },
   {
-    name: "Sneha Reddy",
-    position: "Talent Acquisition Lead",
-    company: "Retail Giants Corp.",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "What sets Two Edge Global Solutions apart is their personalized approach. They take time to understand both the employer and candidate needs, ensuring perfect matches. Truly a reliable recruitment partner!",
+    image: "../assets/4.jpeg",
   },
   {
-    name: "Vikram Singh",
-    position: "Plant Manager",
-    company: "Industrial Solutions Ltd.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "Exceptional payroll and staffing services! Two Edge Global Solutions has streamlined our HR operations and helped us maintain compliance. Their team is always responsive and professional.",
+    image: "../assets/5.jpeg",
   },
   {
-    name: "Neha Gupta",
-    position: "VP of Human Resources",
-    company: "Healthcare Partners Group",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "Working with Two Edge Global Solutions has been a game-changer for our organization. Their extensive network and industry expertise have helped us fill critical positions quickly and efficiently.",
-  },
-  {
-    name: "Sanjay Thakur",
-    position: "Advocate",
-    company: "Legal Associates",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "An extraordinary company that always provides the best candidates as per our requirements. They are punctual and reliable. You will never get any disappointment from them.",
-  },
-  {
-    name: "Sameer Yadav",
-    position: "Chartered Accountant",
-    company: "Finance Experts LLP",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "Being an Entrepreneur, I highly recommend Two Edge Global Solutions as the best consulting partner and candidate provider for your business and organization.",
-  },
-  {
-    name: "Dr. A Prabhakar",
-    position: "Director",
-    company: "ITBIZCON Pvt Ltd",
-    image:
-      "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop",
-    rating: 5,
-    text: "We rely on them for all our manpower requirements. They always fulfill our requests and get candidates with appropriate expertise and the right attitude. I have no hesitation in recommending them.",
+    image: "../assets/6.jpeg",
   },
 ];
+
+// 2️⃣ THEN use it
+const clientsaysTestimonials = [
+  {
+    name: "Anshu Chaturvedi",
+    position: "Senior HR",
+    company: "Two Edge Global Solutions",
+    image: teamImages[0].image,
+    rating: 5,
+    text: "Two Edge Global Solutions has consistently delivered exceptional recruitment support. Their deep understanding of hiring requirements, quick turnaround time, and focus on quality talent make them a highly reliable partner for any organization.",
+  },
+  {
+    name: "Shashikant Tiwari",
+    position: "Talent Acquisition",
+    company: "Two Edge Global Solutions",
+    image: teamImages[1].image,
+    rating: 5,
+    text: "What truly sets Two Edge Global Solutions apart is their professionalism and structured approach. From sourcing to onboarding, every step is handled with precision and care, ensuring the right talent is placed at the right time.",
+  },
+  {
+    name: "Neha",
+    position: "HR Executive",
+    company: "Two Edge Global Solutions",
+    image: teamImages[2].image,
+    rating: 5,
+    text: "Working with Two Edge Global Solutions has made our hiring process seamless and efficient. Their team understands business needs well and consistently delivers candidates who align both technically and culturally with the organization.",
+  },
+  {
+    name: "Aman Shukla",
+    position: "Recruiter",
+    company: "Two Edge Global Solutions",
+    image: teamImages[3].image,
+    rating: 5,
+    text: "The personalized approach followed by Two Edge Global Solutions ensures high-quality placements. They focus not just on filling positions, but on building long-term value for both employers and candidates.",
+  },
+  {
+    name: "Saransh Triphathi",
+    position: "Senior",
+    company: "Two Edge Global Solutions",
+    image: teamImages[4].image,
+    rating: 5,
+    text: "Two Edge Global Solutions has been a dependable partner for staffing and workforce management. Their commitment to timelines, compliance, and service quality has significantly streamlined our recruitment operations.",
+  },
+  {
+    name: "Somya",
+    position: "Talent Acquisition",
+    company: "Two Edge Global Solutions",
+    image: teamImages[5].image,
+    rating: 5,
+    text: "Collaborating with Two Edge Global Solutions has been a great experience. Their strong talent network, clear communication, and proactive support make them an ideal recruitment partner for growing organizations.",
+  },
+];
+
+
+
+
 
 let clientsaysCurrentIndex = 0;
 let clientsaysIsAutoPlaying = true;
