@@ -10,15 +10,7 @@
     <link rel="icon" href="../assets/logo.png" />
     <link rel="apple-touch-icon" href="../assets/logo.png" />
   </head>
-
-  <div id="modal-root"></div>
-  <div id="ud-loader"></div>
-
-  <script src="/Javascript/modal.js"></script>
-  <script src="/Javascript/widgets.js"></script>
-  <div id="floating-button-root"></div>
-  
-  <body>
+  <body class="others-page">
     <!-- ================= HEADER ================= -->
     <div id="header-root"></div>
 
@@ -30,80 +22,206 @@
             Explore <span class="brand-name">More</span>
           </h1>
           <p>
-            Additional resources, updates, and support to help you stay informed
-            and connected with Two Edge Global Solutions.
+            Resources, insights, and updates to help you stay informed and
+            connected with Two Edge Global Solutions.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ================= CONTENT ================= -->
-    <section style="padding: 4rem 0; background: #ffffff">
+    <!-- ================= RESOURCES ================= -->
+    <section class="others-resources">
       <div class="container">
-        <div
-          style="
-            max-width: 72rem;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-          "
-        >
-          <!-- Blog -->
-          <div class="about-value-card">
+        <div class="section-header">
+          <h2 class="section-title">Resources & Updates</h2>
+          <p class="section-description">
+            Discover insights, support, and stories from our recruitment team.
+          </p>
+        </div>
+
+        <div class="others-grid">
+          <article class="resource-card">
+            <div class="resource-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"
+                />
+              </svg>
+            </div>
             <h3>Blog</h3>
             <p>
-              Insights, hiring trends, recruitment tips, and industry updates
-              from our experts to help businesses and professionals stay ahead.
+              Articles on hiring trends, leadership insights, and practical HR
+              guidance.
             </p>
-            <button
-              class="btn btn-outline-primary btn-sm"
-              onclick="openModal('underDevelopmentModal')"
-            >
-              Coming Soon
-            </button>
-          </div>
+            <a href="../Pages/blog.html" class="resource-link">
+              Explore Blog
+            </a>
+          </article>
 
-          <!-- FAQ -->
-          <div class="about-value-card">
-            <h3>Frequently Asked Questions</h3>
+          <article class="resource-card">
+            <div class="resource-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 2a10 10 0 00-3.54 19.39L9 22l1.61-1.02A10 10 0 1012 2z"
+                />
+              </svg>
+            </div>
+            <h3>FAQ</h3>
             <p>
-              Find quick answers to common questions about our recruitment
-              process, services, timelines, and engagement models.
+              Quick answers about our services, timelines, and engagement
+              models.
             </p>
-            <button
-              class="btn btn-outline-primary btn-sm"
-              onclick="openModal('underDevelopmentModal')"
-            >
-              Coming Soon
-            </button>
-          </div>
+            <a href="../Pages/faq.html" class="resource-link">
+              View FAQ
+            </a>
+          </article>
 
-          <!-- Support -->
-          <div class="about-value-card">
+          <article class="resource-card">
+            <div class="resource-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 8h10M7 12h10M7 16h6M5 20h14V4H5z"
+                />
+              </svg>
+            </div>
+            <h3>Testimonials</h3>
+            <p>
+              Real feedback from clients and candidates on their hiring
+              experience.
+            </p>
+            <a href="../Pages/testimonials.html" class="resource-link">
+              Read Stories
+            </a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 7h18M3 12h18M3 17h18"
+                />
+              </svg>
+            </div>
+            <h3>Case Studies</h3>
+            <p>
+              Detailed hiring outcomes across industries and complex roles.
+            </p>
+            <a href="../Pages/case-studies.html" class="resource-link">
+              View Cases
+            </a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16v12H4zM8 10h8M8 14h5"
+                />
+              </svg>
+            </div>
+            <h3>Media</h3>
+            <p>
+              Announcements, company updates, and recruitment initiatives.
+            </p>
+            <a href="../Pages/media.html" class="resource-link">
+              View Media
+            </a>
+          </article>
+
+          <article class="resource-card">
+            <div class="resource-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+                />
+              </svg>
+            </div>
             <h3>Support</h3>
             <p>
-              Need assistance or have specific queries? Our team is here to help
-              you with personalized support and guidance.
+              Direct assistance for hiring queries, partnerships, and service
+              updates.
             </p>
-            <a href="../Pages/contact.html" class="btn btn-outline-primary btn-sm">
+            <a href="../Pages/contact.html" class="resource-link">
               Contact Support
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SUPPORT ================= -->
+    <section class="others-support">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Support Channels</h2>
+          <p class="section-description">
+            Dedicated help for clients, candidates, and partners.
+          </p>
+        </div>
+
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>Client Support</h3>
+            <p>
+              Hiring updates, service coordination, and account management
+              support.
+            </p>
+            <ul class="support-list">
+              <li>Role requirement discussions</li>
+              <li>Pipeline reporting and feedback</li>
+              <li>Compliance and documentation guidance</li>
+            </ul>
+            <a href="../Pages/contact.html" class="btn btn-outline-dark btn-sm">
+              Contact Clients Team
             </a>
           </div>
 
-          <!-- Resources -->
-          <div class="about-value-card">
-            <h3>Resources</h3>
+          <div class="support-card">
+            <h3>Candidate Support</h3>
             <p>
-              Helpful guides, best practices, and downloadable resources
-              designed to simplify recruitment and workforce management.
+              Guidance through interviews, onboarding, and offer coordination.
             </p>
-            <button
-              class="btn btn-outline-primary btn-sm"
-              onclick="openModal('underDevelopmentModal')"
-            >
-              Coming Soon
-            </button>
+            <ul class="support-list">
+              <li>Interview preparation guidance</li>
+              <li>Offer communication and updates</li>
+              <li>Joining and documentation help</li>
+            </ul>
+            <a href="../Pages/contact.html" class="btn btn-outline-dark btn-sm">
+              Contact Candidates Team
+            </a>
+          </div>
+
+          <div class="support-card highlight">
+            <h3>Resource Highlights</h3>
+            <p>
+              Quick access to insights and updates most requested by teams.
+            </p>
+            <ul class="support-list">
+              <li>Latest hiring trends and blog updates</li>
+              <li>Case studies and success metrics</li>
+              <li>FAQ on recruitment timelines</li>
+            </ul>
+            <a href="../Pages/blog.html" class="btn btn-primary btn-sm">
+              Visit Resource Hub
+            </a>
           </div>
         </div>
       </div>
@@ -115,7 +233,7 @@
         <div class="cta-content">
           <h2 class="cta-title">Have Questions?</h2>
           <p class="cta-description">
-            Reach out to our team and we’ll be happy to assist you.
+            Reach out to our team and we will be happy to assist you.
           </p>
           <div class="cta-buttons">
             <button
@@ -124,10 +242,7 @@
             >
               Get Started
             </button>
-            <a
-              href="../Pages/contact.html"
-              class="btn btn-outline-white btn-lg"
-            >
+            <a href="../Pages/contact.html" class="btn btn-outline-white btn-lg">
               Contact Us
             </a>
           </div>
@@ -143,7 +258,10 @@
     <div id="ud-loader"></div>
 
     <!-- ================= SCRIPTS ================= -->
-    <script src="../Javascript/loader.js"></script>
     <script src="../Javascript/script.js"></script>
+    <script src="../Javascript/modal.js"></script>
+    <script src="../Javascript/widgets.js"></script>
+
+    <div id="floating-button-root"></div>
   </body>
 </html>

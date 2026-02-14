@@ -1,83 +1,169 @@
 <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
   <div class="container">
     <div class="nav-content">
-
-      <!-- Logo -->
       <div class="logo-container">
         <a href="../index.html">
           <img src="../assets/logo.png" class="logo" alt="Two Edge Global Solutions" />
         </a>
       </div>
 
-      <!-- Navigation -->
-      <div class="nav-links">
+      <button
+        class="mobile-menu-btn"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
 
+      <div class="nav-links desktop-nav">
         <a href="../index.html" class="nav-link">Home</a>
 
-        <!-- About Us -->
         <div class="nav-dropdown">
           <a href="../Pages/about.html" class="nav-link dropdown-toggle">
-            About Us <span class="dropdown-arrow">▾</span>
+            About Us <span class="dropdown-arrow">&#9662;</span>
           </a>
           <div class="dropdown-menu">
-            <a href="../Pages/company-overview.html">Company Overview</a>
-            <a href="../Pages/mission-vision.html">Vision & Mission</a>
-            <a href="../Pages/our-values.html">Our Values</a>
-            <a href="#">Why Choose Us</a>
-            <a href="#">Certifications</a>
-            <a href="#">Awards & Recognition</a>
+            <a href="../Pages/company-overview.html">Our Journey</a>
+            <a href="../Pages/mission-vision.html">Know Us</a>
+            <a href="../Pages/our-values.html">Our Core Expertise</a>
+            <a href="../Pages/our-strengths.html">Our Strengths</a>
+            <a href="../Pages/key-to-success.html">Key to Success</a>
           </div>
         </div>
 
-        <!-- Team -->
         <div class="nav-dropdown">
-          <a href="#" class="nav-link dropdown-toggle">
-            Team TEGS <span class="dropdown-arrow">▾</span>
+          <a href="../Pages/leadership-team.html" class="nav-link dropdown-toggle">
+            Team TEGS <span class="dropdown-arrow">&#9662;</span>
           </a>
           <div class="dropdown-menu">
             <a href="../Pages/msgfromCEO.html">Message from CEO</a>
-            <a href="#">Leadership Team</a>
-            <a href="#">Recruiters</a>
-            <a href="#">HR Team</a>
-            <a href="#">Careers</a>
-            <a href="#">Join Us</a>
+            <a href="../Pages/leadership-team.html">Leadership Team</a>
+            <a href="../Pages/recruiters.html">Recruiters</a>
+            <a href="../Pages/hr-team.html">HR Team</a>
+            <a href="../Pages/careers.html">Careers</a>
+            <a href="../Pages/join-us.html">Join Us</a>
           </div>
         </div>
 
-        <!-- Services -->
         <div class="nav-dropdown">
           <a href="../Pages/services.html" class="nav-link dropdown-toggle">
-            Services <span class="dropdown-arrow">▾</span>
+            Services <span class="dropdown-arrow">&#9662;</span>
           </a>
           <div class="dropdown-menu">
-            <a href="#">Talent Acquisition</a>
-            <a href="#">Staffing Solutions</a>
-            <a href="#">Bulk Hiring</a>
-            <a href="#">Executive Search</a>
-            <a href="#">Payroll Management</a>
-            <a href="#">HR Consulting</a>
+            <a href="../Pages/talent-acquisition.html">Talent Acquisition</a>
+            <a href="../Pages/staffing-solutions.html">Staffing Solutions</a>
+            <a href="../Pages/bulk-hiring.html">Bulk Hiring</a>
+            <a href="../Pages/executive-search.html">Executive Search</a>
+            <a href="../Pages/payroll-management.html">Payroll Management</a>
+            <a href="../Pages/hr-consulting.html">HR Consulting</a>
           </div>
         </div>
 
-        <!-- Others -->
         <div class="nav-dropdown">
-          <a href="#" class="nav-link dropdown-toggle">
-            Others <span class="dropdown-arrow">▾</span>
+          <a href="../Pages/others.html" class="nav-link dropdown-toggle">
+            Others <span class="dropdown-arrow">&#9662;</span>
           </a>
           <div class="dropdown-menu">
-            <a href="#">Blog</a>
-            <a href="#">FAQ</a>
-            <a href="#">Testimonials</a>
-            <a href="#">Case Studies</a>
-            <a href="#">Media</a>
+            <a href="../Pages/blog.html">Blog</a>
+            <a href="../Pages/faq.html">FAQ</a>
+            <a href="../Pages/testimonials.html">Testimonials</a>
+            <a href="../Pages/case-studies.html">Case Studies</a>
+            <a href="../Pages/media.html">Media</a>
             <a href="../Pages/contact.html">Contact</a>
           </div>
         </div>
 
-        <!-- CTA -->
-        <button class="btn btn-primary">Get Started</button>
-
+        <button
+          class="btn btn-primary"
+          type="button"
+          onclick="openModal('getStartedModal')"
+        >
+          Get Started
+        </button>
       </div>
+    </div>
+
+    <div id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="../index.html" class="nav-link">Home</a>
+
+      <div class="nav-dropdown">
+        <a href="../Pages/about.html" class="nav-link dropdown-toggle">
+          About Us <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../Pages/company-overview.html">Our Journey</a>
+          <a href="../Pages/mission-vision.html">Know Us</a>
+          <a href="../Pages/our-values.html">Our Core Expertise</a>
+          <a href="../Pages/our-strengths.html">Our Strengths</a>
+          <a href="../Pages/key-to-success.html">Key to Success</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a href="../Pages/leadership-team.html" class="nav-link dropdown-toggle">
+          Team TEGS <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../Pages/msgfromCEO.html">Message from CEO</a>
+          <a href="../Pages/leadership-team.html">Leadership Team</a>
+          <a href="../Pages/recruiters.html">Recruiters</a>
+          <a href="../Pages/hr-team.html">HR Team</a>
+          <a href="../Pages/careers.html">Careers</a>
+          <a href="../Pages/join-us.html">Join Us</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a href="../Pages/services.html" class="nav-link dropdown-toggle">
+          Services <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../Pages/talent-acquisition.html">Talent Acquisition</a>
+          <a href="../Pages/staffing-solutions.html">Staffing Solutions</a>
+          <a href="../Pages/bulk-hiring.html">Bulk Hiring</a>
+          <a href="../Pages/executive-search.html">Executive Search</a>
+          <a href="../Pages/payroll-management.html">Payroll Management</a>
+          <a href="../Pages/hr-consulting.html">HR Consulting</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a href="../Pages/others.html" class="nav-link dropdown-toggle">
+          Others <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <div class="dropdown-menu">
+          <a href="../Pages/blog.html">Blog</a>
+          <a href="../Pages/faq.html">FAQ</a>
+          <a href="../Pages/testimonials.html">Testimonials</a>
+          <a href="../Pages/case-studies.html">Case Studies</a>
+          <a href="../Pages/media.html">Media</a>
+          <a href="../Pages/contact.html">Contact</a>
+        </div>
+      </div>
+
+      <button
+        class="btn btn-primary"
+        type="button"
+        onclick="openModal('getStartedModal')"
+      >
+        Get Started
+      </button>
     </div>
   </div>
 </nav>

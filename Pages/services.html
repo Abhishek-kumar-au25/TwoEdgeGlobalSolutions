@@ -10,15 +10,7 @@
     <link rel="icon" href="../assets/logo.png" />
     <link rel="apple-touch-icon" href="../assets/logo.png" />
   </head>
-
-  <div id="modal-root"></div>
-  <div id="ud-loader"></div>
-
-  <script src="/Javascript/modal.js"></script>
-  <script src="/Javascript/widgets.js"></script>
-  <div id="floating-button-root"></div>
-  
-  <body>
+  <body class="services-page">
     <!-- ================= HEADER ================= -->
     <div id="header-root"></div>
 
@@ -28,74 +20,304 @@
         <div class="page-hero-content">
           <h1>Our <span class="brand-name">Services</span></h1>
           <p>
-            Comprehensive recruitment and staffing solutions designed to empower
-            businesses and careers.
+            Recruitment and staffing solutions designed for speed, quality, and
+            long-term success.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- ================= SERVICES ================= -->
-    <section style="padding: 4rem 0; background: #ffffff">
+    <!-- ================= OVERVIEW ================= -->
+    <section class="services-overview">
       <div class="container">
-        <div
-          style="
-            max-width: 72rem;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-          "
-        >
-          <div class="about-value-card">
+        <div class="section-header">
+          <h2 class="section-title">Service Snapshot</h2>
+          <p class="section-description">
+            Reliable hiring outcomes powered by process, reach, and talent
+            intelligence.
+          </p>
+        </div>
+
+        <div class="services-overview-grid">
+          <div class="overview-card">
+            <div class="overview-stat">25+</div>
+            <div class="overview-label">States Covered</div>
+            <p class="overview-text">
+              Regional reach with strong local talent networks.
+            </p>
+          </div>
+
+          <div class="overview-card">
+            <div class="overview-stat">500+</div>
+            <div class="overview-label">Successful Placements</div>
+            <p class="overview-text">
+              Consistent delivery across multiple industries and roles.
+            </p>
+          </div>
+
+          <div class="overview-card">
+            <div class="overview-stat">200+</div>
+            <div class="overview-label">Active Clients</div>
+            <p class="overview-text">
+              Long-term partnerships built on measurable results.
+            </p>
+          </div>
+
+          <div class="overview-card">
+            <div class="overview-stat">48 hrs</div>
+            <div class="overview-label">First Shortlist</div>
+            <p class="overview-text">
+              Fast turnarounds without compromising quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CORE SERVICES ================= -->
+    <section class="services-card-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Core Services</h2>
+          <p class="section-description">
+            Select the service that matches your hiring requirements.
+          </p>
+        </div>
+
+        <div class="services-card-grid">
+          <article class="service-card-new amber">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 11c1.66 0 3-1.34 3-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zM8 13c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13z"
+                />
+              </svg>
+            </div>
+            <div class="service-tag">Recruitment</div>
             <h3>Talent Acquisition</h3>
             <p>
-              End-to-end talent acquisition strategies to attract, assess, and
-              onboard the right candidates aligned with your business goals.
+              End-to-end hiring support from role discovery to onboarding with
+              strong quality controls.
             </p>
-          </div>
+            <ul class="service-features">
+              <li>Role calibration and market mapping</li>
+              <li>Structured screening and shortlisting</li>
+              <li>Interview coordination and offer support</li>
+            </ul>
+            <a href="../Pages/talent-acquisition.html" class="service-link">
+              Learn More
+            </a>
+          </article>
 
-          <div class="about-value-card">
+          <article class="service-card-new blue">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 2h4a2 2 0 012 2v2h4v16H4V6h4V4a2 2 0 012-2z"
+                />
+              </svg>
+            </div>
+            <div class="service-tag">Workforce</div>
             <h3>Staffing Solutions</h3>
             <p>
-              Flexible staffing solutions including temporary, permanent, and
-              contract staffing to meet dynamic workforce demands.
+              Flexible models for contract, temporary, and permanent staffing
+              needs.
             </p>
-          </div>
+            <ul class="service-features">
+              <li>Rapid deployment and scalable hiring</li>
+              <li>Role-specific screening workflows</li>
+              <li>Ongoing engagement support</li>
+            </ul>
+            <a href="../Pages/staffing-solutions.html" class="service-link">
+              Learn More
+            </a>
+          </article>
 
-          <div class="about-value-card">
+          <article class="service-card-new emerald">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div class="service-tag">Volume</div>
+            <h3>Bulk Hiring</h3>
+            <p>
+              High-volume recruitment delivered with structured screening and
+              process discipline.
+            </p>
+            <ul class="service-features">
+              <li>Bulk sourcing campaigns and drives</li>
+              <li>Batch interview coordination</li>
+              <li>Joining and documentation support</li>
+            </ul>
+            <a href="../Pages/bulk-hiring.html" class="service-link">
+              Learn More
+            </a>
+          </article>
+
+          <article class="service-card-new slate">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 2l4 4-4 4-4-4 4-4zM4 14l4 4-4 4-4-4 4-4zM20 14l4 4-4 4-4-4 4-4z"
+                />
+              </svg>
+            </div>
+            <div class="service-tag">Leadership</div>
             <h3>Executive Search</h3>
             <p>
-              Specialized executive search services to identify and place
-              senior-level professionals and leadership talent.
+              Confidential leadership hiring with targeted outreach and
+              objective evaluation.
             </p>
-          </div>
+            <ul class="service-features">
+              <li>Market mapping and candidate research</li>
+              <li>Leadership assessment and alignment</li>
+              <li>Offer and onboarding support</li>
+            </ul>
+            <a href="../Pages/executive-search.html" class="service-link">
+              Learn More
+            </a>
+          </article>
 
-          <div class="about-value-card">
+          <article class="service-card-new amber">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+            </div>
+            <div class="service-tag">Operations</div>
+            <h3>Payroll Management</h3>
+            <p>
+              Payroll coordination, compliance support, and workforce
+              administration.
+            </p>
+            <ul class="service-features">
+              <li>Payroll processing and reporting</li>
+              <li>Compliance and documentation tracking</li>
+              <li>Employee query support</li>
+            </ul>
+            <a href="../Pages/payroll-management.html" class="service-link">
+              Learn More
+            </a>
+          </article>
+
+          <article class="service-card-new blue">
+            <div class="service-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                />
+              </svg>
+            </div>
+            <div class="service-tag">Advisory</div>
             <h3>HR Consulting</h3>
             <p>
-              Strategic HR consulting services focused on workforce planning,
-              compliance, performance management, and organizational growth.
+              Strategic HR guidance to strengthen people operations and improve
+              retention.
+            </p>
+            <ul class="service-features">
+              <li>Workforce planning and org design</li>
+              <li>Policy and compliance support</li>
+              <li>Performance and engagement frameworks</li>
+            </ul>
+            <a href="../Pages/hr-consulting.html" class="service-link">
+              Learn More
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="services-steps">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Delivery Process</h2>
+          <p class="section-description">
+            A proven framework to keep hiring aligned, fast, and measurable.
+          </p>
+        </div>
+
+        <div class="services-step-grid">
+          <div class="step-card">
+            <div class="step-index">01</div>
+            <h3>Discover</h3>
+            <p>
+              Role calibration, success metrics, and hiring timelines aligned
+              early.
             </p>
           </div>
 
-          <div class="about-value-card">
-            <h3>Contract Hiring</h3>
+          <div class="step-card">
+            <div class="step-index">02</div>
+            <h3>Source</h3>
             <p>
-              Efficient contract hiring solutions enabling organizations to
-              scale quickly with skilled professionals for short- and long-term
-              projects.
+              Dedicated sourcing with market mapping and targeted outreach.
             </p>
           </div>
 
-          <div class="about-value-card">
-            <h3>Workforce Management</h3>
+          <div class="step-card">
+            <div class="step-index">03</div>
+            <h3>Screen</h3>
             <p>
-              Comprehensive workforce management solutions including payroll
-              coordination, compliance support, and employee lifecycle
-              management.
+              Structured evaluations to validate skill fit, motivation, and
+              culture alignment.
             </p>
           </div>
+
+          <div class="step-card">
+            <div class="step-index">04</div>
+            <h3>Deliver</h3>
+            <p>
+              Shortlist submission, interview coordination, and onboarding
+              support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INDUSTRIES ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Industries We Support</h2>
+          <p class="section-description">
+            Hiring expertise across a wide range of business functions.
+          </p>
+        </div>
+
+        <div class="industry-tags">
+          <span class="industry-tag">Technology</span>
+          <span class="industry-tag">Manufacturing</span>
+          <span class="industry-tag">Retail</span>
+          <span class="industry-tag">Finance</span>
+          <span class="industry-tag">Healthcare</span>
+          <span class="industry-tag">Logistics</span>
+          <span class="industry-tag">Hospitality</span>
+          <span class="industry-tag">Telecom</span>
         </div>
       </div>
     </section>
@@ -104,7 +326,7 @@
     <section class="section section-cta">
       <div class="container">
         <div class="cta-content">
-          <h2 class="cta-title">Let’s Build Your Team</h2>
+          <h2 class="cta-title">Let's Build Your Team</h2>
           <p class="cta-description">
             Partner with us to access reliable recruitment and staffing
             solutions tailored to your needs.
@@ -127,7 +349,10 @@
     <div id="ud-loader"></div>
 
     <!-- ================= SCRIPTS ================= -->
-    <script src="../Javascript/loader.js"></script>
     <script src="../Javascript/script.js"></script>
+    <script src="../Javascript/modal.js"></script>
+    <script src="../Javascript/widgets.js"></script>
+
+    <div id="floating-button-root"></div>
   </body>
 </html>

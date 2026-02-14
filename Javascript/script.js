@@ -1,12 +1,3 @@
-/* Mobile Menu */
-document.addEventListener("click", (e) => {
-  const btn = e.target.closest(".mobile-menu-btn");
-  if (!btn) return;
-
-  const nav = document.querySelector(".mobile-nav");
-  if (nav) nav.classList.toggle("active");
-});
-
 /* Hero Carousel */
 const slides = document.querySelectorAll(".hero-image");
 const indicators = document.querySelectorAll(".indicator");
@@ -18,6 +9,14 @@ function showSlide(i) {
   slides[i]?.classList.add("active");
   indicators[i]?.classList.add("active");
 }
+
+function changeHeroImage(index) {
+  if (!slides.length) return;
+  current = index % slides.length;
+  showSlide(current);
+}
+
+window.changeHeroImage = changeHeroImage;
 
 if (slides.length) {
   showSlide(0);
@@ -114,6 +113,9 @@ const clientsaysItemsPerPage = 3;
 const clientsaysTotalPages = Math.ceil(
   clientsaysTestimonials.length / clientsaysItemsPerPage,
 );
+const clientsaysGrid = document.getElementById("clientsaysTestimonialsGrid");
+const clientsaysDots = document.getElementById("clientsaysDots");
+const clientsaysHasUI = Boolean(clientsaysGrid && clientsaysDots);
 
 // Generate star SVG
 function clientsaysGenerateStars(rating) {
@@ -130,14 +132,14 @@ function clientsaysGenerateStars(rating) {
 
 // Render testimonials
 function clientsaysRenderTestimonials() {
+  if (!clientsaysGrid) return;
   const startIndex = clientsaysCurrentIndex * clientsaysItemsPerPage;
   const currentTestimonials = clientsaysTestimonials.slice(
     startIndex,
     startIndex + clientsaysItemsPerPage,
   );
 
-  const grid = document.getElementById("clientsaysTestimonialsGrid");
-  grid.innerHTML = currentTestimonials
+  clientsaysGrid.innerHTML = currentTestimonials
     .map(
       (testimonial) => `
                 <div class="clientsays-testimonial-card">
@@ -179,8 +181,8 @@ function clientsaysRenderTestimonials() {
 
 // Render dots
 function clientsaysRenderDots() {
-  const dotsContainer = document.getElementById("clientsaysDots");
-  dotsContainer.innerHTML = Array.from(
+  if (!clientsaysDots) return;
+  clientsaysDots.innerHTML = Array.from(
     { length: clientsaysTotalPages },
     (_, i) => `
                 <button 
@@ -226,8 +228,10 @@ function clientsaysAutoPlay() {
 }
 
 // Initialize
-clientsaysRenderTestimonials();
-clientsaysRenderDots();
+if (clientsaysHasUI) {
+  clientsaysRenderTestimonials();
+  clientsaysRenderDots();
 
-// Start auto-play
-setInterval(clientsaysAutoPlay, 5000);
+  // Start auto-play
+  setInterval(clientsaysAutoPlay, 5000);
+}
