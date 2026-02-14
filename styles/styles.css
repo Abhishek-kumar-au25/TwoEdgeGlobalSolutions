@@ -24,7 +24,7 @@
 /* ================= LOGO ================= */
 
 .logo {
-  height: 48px;
+  height: 4.25rem;
 }
 
 /* ================= LINKS ================= */
@@ -211,14 +211,14 @@ img {
 }
 
 .logo {
-  height: 3.75rem;
+  height: 4.25rem;
   width: auto;
   cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .logo {
-    height: 4.5rem;
+    height: 5rem;
   }
 }
 
@@ -815,7 +815,7 @@ img {
 
 /* Brand */
 .tegs-footer-logo {
-  height: 90px;
+  height: 110px;
   margin-bottom: 1rem;
 }
 

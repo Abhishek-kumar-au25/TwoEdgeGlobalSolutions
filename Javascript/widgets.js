@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   };
 
-  loadWidget("header-root", `${base}Widgets/header.html`, (root) => {
+  loadWidget("header-root", `${base}widgets/header.html`, (root) => {
     normalizeWidgetPaths(root);
     enableUnderDevLinks(root);
   });
-  loadWidget("footer-root", `${base}Widgets/footer.html`, normalizeWidgetPaths);
+  loadWidget("footer-root", `${base}widgets/footer.html`, normalizeWidgetPaths);
   loadWidget("modal-root", `${base}modals/get-started-modal.html`);
   loadWidget("ud-loader", `${base}modals/underdevelopment.html`);
   loadWidget("floating-button-root", `${base}modals/floatingbutton.html`);

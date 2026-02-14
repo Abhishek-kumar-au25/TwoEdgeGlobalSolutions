@@ -9,7 +9,7 @@ function getBasePath() {
 const BASE = getBasePath();
 
 // ================= LOAD HEADER =================
-fetch(`${BASE}/Widgets/header.html`)
+fetch(`${BASE}/widgets/header.html`)
   .then((res) => {
     if (!res.ok) throw new Error("Header not found");
     return res.text();
@@ -21,7 +21,7 @@ fetch(`${BASE}/Widgets/header.html`)
   .catch((err) => console.error("Header load failed:", err));
 
 // ================= LOAD FOOTER =================
-fetch(`${BASE}/Widgets/footer.html`)
+fetch(`${BASE}/widgets/footer.html`)
   .then((res) => {
     if (!res.ok) throw new Error("Footer not found");
     return res.text();
