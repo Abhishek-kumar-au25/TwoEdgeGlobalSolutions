@@ -36,7 +36,7 @@
 /* ================= LOGO ================= */
 
 .logo {
-  height: 4.25rem;
+  height: 3.525rem;
 }
 
 /* ================= LINKS ================= */
@@ -223,14 +223,14 @@ img {
 }
 
 .logo {
-  height: 4.25rem;
+  height: 3.525rem;
   width: auto;
   cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .logo {
-    height: 5rem;
+    height: 4.5rem;
   }
 }
 
