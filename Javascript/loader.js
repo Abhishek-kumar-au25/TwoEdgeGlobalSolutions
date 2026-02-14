@@ -1,7 +1,7 @@
 // ================= PATH HELPER =================
 function getBasePath() {
   // If page is inside /Pages, go one level up
-  return window.location.pathname.includes("/Pages/")
+  return window.location.pathname.toLowerCase().includes("/pages/")
     ? ".."
     : ".";
 }
@@ -9,7 +9,7 @@ function getBasePath() {
 const BASE = getBasePath();
 
 // ================= LOAD HEADER =================
-fetch(`${BASE}/widgets/header.html`)
+fetch(`${BASE}/Widgets/header.html`)
   .then((res) => {
     if (!res.ok) throw new Error("Header not found");
     return res.text();
@@ -21,7 +21,7 @@ fetch(`${BASE}/widgets/header.html`)
   .catch((err) => console.error("Header load failed:", err));
 
 // ================= LOAD FOOTER =================
-fetch(`${BASE}/widgets/footer.html`)
+fetch(`${BASE}/Widgets/footer.html`)
   .then((res) => {
     if (!res.ok) throw new Error("Footer not found");
     return res.text();
